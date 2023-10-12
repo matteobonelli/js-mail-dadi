@@ -30,13 +30,13 @@ button.addEventListener('click', function(){
         if(currentEmail === emailUser){
             trovato = true;
         }
+    }
     if(trovato === true){
         bgTextAlert = 'alert-success';
         text = `<h2 class = 'display-2 fw-bold'>Benvenuto!</h2>`;
     } else{
         bgTextAlert = 'alert-danger';
         text = `<h2 class ='display-2 fw-bold'>Non puoi accedere!</h2>`;
-    }
     }
     userText.innerHTML = text;
     userText.classList.add(bgTextAlert);
