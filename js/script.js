@@ -32,8 +32,9 @@ button.addEventListener('click', function(){
         }
     }
     if(trovato === true){
+        let userNameEmail = emailUser.substring(0, emailUser.indexOf("@"));
         bgTextAlert = 'alert-success';
-        text = `<h2 class = 'display-2 fw-bold'>Benvenuto!</h2>`;
+        text = `<h2 class = 'display-2 fw-bold'>Benvenuto ${userNameEmail} !</h2>`;
     } else{
         bgTextAlert = 'alert-danger';
         text = `<h2 class ='display-2 fw-bold'>Non puoi accedere!</h2>`;
