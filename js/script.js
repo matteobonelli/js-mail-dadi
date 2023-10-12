@@ -46,3 +46,36 @@ button.addEventListener('click', function(){
 })
 
 
+const throwDices = document.querySelector('.btn-dark');
+const deleteDices = document.querySelector('.btn-danger');
+const diceResult = document.getElementById('dice-result');
+
+deleteDices.addEventListener('click', function(){
+    diceResult.classList.add('d-none');
+})
+
+throwDices.addEventListener('click', function(){
+    let userNumber = getRandomInt(1, 6);
+    let computerNumber = getRandomInt(1, 6);
+    let textDices;
+    console.log(userNumber, computerNumber)
+    if(userNumber > computerNumber){
+        textDices = `<h2 class ='display-2 fw-bold'>Hai vinto!</h2>`
+    }else if(userNumber < computerNumber){
+        textDices = `<h2 class ='display-2 fw-bold'>Hai perso!</h2>`
+    } else{
+        textDices = `<h2 class ='display-2 fw-bold'>Pareggio</h2>`
+    }
+    diceResult.innerHTML =`<h3 class='text-dark'> All'utente esce il numero ${userNumber}</h3>
+    <h3 class='text-dark'> Mentre al computer esce il numero ${computerNumber}</h3>
+    ${textDices}` ;
+    diceResult.classList.remove('d-none');
+})
+
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+  
