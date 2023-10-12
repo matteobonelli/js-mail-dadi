@@ -13,7 +13,7 @@ const accessList = [
 ];
 
 deleteButton.addEventListener('click', function(){
-    let emailUser = document.querySelector('input').value = '';
+    document.querySelector('input').value = '';
     userText.className = 'd-none alert text-center' 
 })
 
@@ -61,9 +61,9 @@ throwDices.addEventListener('click', function(){
     let textDices;
     console.log(userNumber, computerNumber)
     if(userNumber > computerNumber){
-        textDices = `<h2 class ='display-2 fw-bold'>Hai vinto!</h2>`
+        textDices = `<h2 class ='display-2 fw-bold text-success'>Hai vinto!</h2>`
     }else if(userNumber < computerNumber){
-        textDices = `<h2 class ='display-2 fw-bold'>Hai perso!</h2>`
+        textDices = `<h2 class ='display-2 fw-bold text-danger'>Hai perso!</h2>`
     } else{
         textDices = `<h2 class ='display-2 fw-bold'>Pareggio</h2>`
     }
